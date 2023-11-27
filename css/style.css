@@ -1,23 +1,268 @@
+/* General */
 * {
-  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  font-family: sans-serif;
+
+}
+:root {
+--font-family: 'Arial', sans-serif; 
+--background-color: #3498db;
+--text-color: #db3498;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  background-image: url(../images/background-ocean.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: var(--font-family);
+  margin-bottom: 50px;
+  }
+
+
+/* Navigation */
+nav {
+width: 100%;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: flex-end;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+nav ul li {
+list-style: none;
+display: inline-block;
+margin: 10px 0;
+position: relative;
 }
 
-p {
-  margin: 0;
+nav ul li::after {
+content: '';
+height: 3px;
+width: 0%;
+background: #3498db;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: width 0.5s;
+}
+
+nav ul li:hover::after {
+width: 100%;
+}
+
+
+nav ul li a {
+text-decoration: none;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+/* Header */
+header {
+padding: 1em;
+text-align: center;
+background: linear-gradient(to right, rgba(0, 0, 0, 0.5), #3498db, #db3498);  margin-top: 14px;
+}
+
+header h2 {
+color: black;
+margin: 0;
+transition: text-shadow 0.5s ease-in-out;
+cursor: default;
+}
+
+header h2:hover {
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+color: var(--text-color);
+}
+
+/* About Me*/
+.page-section#about {
+color: white;
+padding: 2em;
+display: flex;
+align-items: center;
+margin: 50px 20px;
+text-align: left;
+min-height: 30vw;
+position: relative;
+}
+
+.page-section#about h2.meriam::before {
+content: '';
+display: block;
+width: 5px; 
+height: 40%;
+background-color: var(--background-color); 
+position: absolute;
+left: 0;
+top: 45%;
+transform: translateY(-35%);
+}
+
+
+.page-section#about p {
+font-size: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 20px;
+font-family: 'Courier New', Courier, monospace;
+border-style: solid;
+border-color: var(--background-color);
+background-color: black; opacity: 80%;
+padding: 20px;
+}
+
+.meriam {
+color: white;
+text-transform: uppercase;
+margin right: 20px;
+transition: text-shadow 0.5s ease-in-out; 
+cursor: default;
+}
+
+.meriam:hover {
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+color: var(--text-color);
+}
+
+.page-section#about img {
+height: 400px;
+width: auto;
+border-radius: 8px;
+margin-left: 20px;
+}
+
+/* About Me - Portfolio Main Img */
+.portfolio-main {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.portfolio-main img {
+height: 400px;
+width: 600px;
+object-fit: cover;
+opacity: 70%;
+left: 0;
+top: 50%;
+border-radius: 15px;
+transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-main:hover img {
+transform: scale(1.1);
+opacity: 100%;
+}
+
+.portfolio-main a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+.portfolio-main a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  color: var(--text-color);
+}
+  
+/* Portfolio */
+.page-section#work {
+display: flex;
+justify-content: space-between;
+margin-left: -30px;
+}
+
+.page-section#work h3 {
+color: white;
+position: relative;
+margin-left: 150px;
+display: inline-block;
+cursor: pointer;
+}
+
+.page-section#work h3:hover {
+color: #db3498;
+}
+
+.page-section#work h3::after {
+content: '';
+height: 3px;
+width: 0%;
+background: #3498db;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: width 0.5s;
+}
+
+.page-section#work h3:hover::after {
+width: 100%;
+}
+
+.portfolio-item {
+width: 100%; 
+}
+
+
+.portfolio-item img {
+max-width: 100%;
+height: 200px;
+width: 100%;
+transition: transform 0.3s ease-in-out;
+opacity: 70%;
+border-radius: 8px;
+}
+
+.portfolio-item:hover img {
+transform: scale(1.1); 
+opacity: 100%;
+}
+
+/* Footer */
+footer {
+color: white;
+display: flex;
+justify-content: center;
+margin-top: 200px;
+}
+
+footer ul {
+list-style: none;
+display: flex;
+}
+
+footer ul li { 
+margin: 0 100px;
+text-align: center;
+font-size: 18px;
+position: relative;
+color: var(--background-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+footer ul li a {
+color: white;
+transition: text-shadow 0.5s ease-in-out; 
+cursor: default;
+font-weight: bold;
+} 
+
+footer ul li a:hover {
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+color: var(--text-color);
+cursor: pointer;
+}
+
+footer ul li img {
+position: absolute;
+top: -55px;
 }

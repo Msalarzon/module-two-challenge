@@ -266,3 +266,72 @@ footer ul li img {
 position: absolute;
 top: -55px;
 }
+
+/* Media Query Properties */
+@media screen and (max-width: 768px) {
+ 
+
+  /* General - Media Query */
+  body {
+    zoom: 0.6;
+  }
+
+  /* Navigation - Media Query */
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .page-section#work h3 {
+    margin: 20px;
+  }
+  
+  /* About Me - Media Query */
+  .page-section#about h2.meriam::before {
+    height: 60px;
+    top: 5%;
+    left: 20px;
+  }
+  .page-section#about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .page-section#about img {
+    zoom: 0.7;
+  
+  }
+  /* Portfolio - Media Query */
+  .page-section#work {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .page-section#work h3 {
+    transform: translateX(20%);
+  }
+
+  .portfolio-main {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .portfolio-main h2 {
+    margin top: 10px;
+  }
+
+  .portfolio-item {
+    width: 60%;
+    align-items: center;
+    transform: translateX(25%);
+  }
+
+  /*Footer - Media Query */
+  footer ul li {
+    margin: 0 20px; 
+  }
+
+  footer ul li img {
+    top: -60px; 
+  }
+}
+
